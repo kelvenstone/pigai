@@ -4,7 +4,7 @@ class Wrpigai::CompositionsController < ApplicationController
 
   def index
     @compositions = Composition.all.order("created_at DESC")
-  end 
+  end
 
 
 end
