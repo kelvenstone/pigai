@@ -402,21 +402,19 @@ form {
   margin: 0 auto;
 }
 
-/******登录后正文背景图，未使用*****/
+/******登录后正文背景图，未使用 5.2日屏蔽*****/
 /****** 使用时：pigai123改成pigai *****/
-.pigai {
-  // background-image:url("login.jpg");
-  background-color: #F5F5F5;
-  background-size: cover;
-  background-repeat: repeat-y;
-  // position: relative;
-  // top: 50px;
-  margin: auto;
-  padding-bottom: 0px;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-}
+// .pigai {
+//
+//   background-color: #F5F5F5;
+//   background-size: cover;
+//   background-repeat: repeat-y;
+//   margin: auto;
+//   padding-bottom: 0px;
+//   min-width: 100%;
+//   min-height: 100%;
+//   z-index: -1;
+// }
 
 /* Footer */
 
