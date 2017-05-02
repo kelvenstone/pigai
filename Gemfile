@@ -45,6 +45,7 @@ gem "refile-mini_magick"
 gem "refile-s3", '~> 0.2.0'
 gem 'jquery-fileupload-rails'
 gem 'annotate'
+gem 'will_paginate'
 
 
 group :development, :test do

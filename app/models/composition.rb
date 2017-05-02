@@ -6,4 +6,6 @@ class Composition < ApplicationRecord
   validates :com_title, presence: true
   validates :content, presence: true
 
+  scope :recent, -> { order("created_at DESC")}
+
 end

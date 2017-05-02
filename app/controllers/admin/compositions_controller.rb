@@ -3,7 +3,7 @@ class Admin::CompositionsController < ApplicationController
   before_action :set_composition, only: [:show, :edit, :update, :destroy]
 
   def index
-    @compositions = Composition.all.order("created_at DESC")
+    @compositions = Composition.all.recent.paginate(:page => params[:page], :per_page => 6)
   end
 
   def new

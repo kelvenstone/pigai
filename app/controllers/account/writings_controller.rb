@@ -3,7 +3,7 @@ class Account::WritingsController < ApplicationController
   layout "side_grade"
 
   def index
-    @writings = current_user.writings.order("created_at DESC")
+    @writings = current_user.writings.recent.paginate(:page => params[:page], :per_page => 8)
 
   end
 
@@ -41,7 +41,7 @@ class Account::WritingsController < ApplicationController
 
   def woyaopigai
     @writings = Writing.all.order("created_at DESC")
-    redirect_to :back 
+    redirect_to :back
   end
 
   private

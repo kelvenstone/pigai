@@ -7,7 +7,7 @@ class WritingsController < ApplicationController
     #登录状态下(管理员或者用户)显示：某一篇作文题木下的所有作文；  非登录状态下显示全部作文。
     if params[:composition_id]
       @composition= Composition.find(params[:composition_id])
-      @writings = @composition.writings.order("created_at DESC")
+      @writings = @composition.writings.recent.paginate(:page => params[:page], :per_page => 6)
     else
       @writings = Writing.all.order("created_at DESC")
     end

@@ -6,6 +6,7 @@ class CorrectionsController < ApplicationController
     @writing = Writing.find(params[:writing_id])
     @corrections = @writing.corrections.order("created_at DESC")
   end
+  
   def new
     @writing = Writing.find(params[:writing_id])
     @composition = @writing.composition

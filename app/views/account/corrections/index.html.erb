@@ -18,6 +18,11 @@
               <%= render :partial => "corrections_item", :collection => @corrections, :as => :correction %>
             </tbody>
           </table>
+
+          <div class="text-center">
+            <%= will_paginate @corrections %>
+          </div>
+
       </div>
     </div>
   </div>

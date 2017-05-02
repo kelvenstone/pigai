@@ -3,7 +3,7 @@ class Admin::CorrectionsController < ApplicationController
 
 
   def index
-      @corrections = Correction.all.order("created_at DESC")
+      @corrections = Correction.all.recent.paginate(:page => params[:page], :per_page => 8)
   end
 
   def show

@@ -3,7 +3,7 @@ class Account::CorrectionsController < ApplicationController
   layout "side_grade"
 
   def index
-      @corrections = current_user.corrections.order("created_at DESC")
+      @corrections = current_user.corrections.recent.paginate(:page => params[:page], :per_page => 8)
   end
 
   def show

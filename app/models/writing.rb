@@ -4,4 +4,6 @@ class Writing < ApplicationRecord
   belongs_to :composition
   has_many :corrections
 
+  scope :recent, -> { order("created_at DESC")}
+
 end

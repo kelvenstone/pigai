@@ -14,8 +14,8 @@
       <% end %>
       <% if @@flag_writing_used == 0 %>
         <td> <%= writing.composition.grade %></td>
-        <td> <%= writing.composition.com_title %></td>
-        <td> <%= link_to(writing.user.email, writing_path(writing)) %> </td>
+        <td> <%= link_to(writing.composition.com_title, writing_path(writing)) %> </td>
+        <td> <%= writing.user.email %> </td>
       <% end %>
 
     <% end %>
