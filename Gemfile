@@ -39,7 +39,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise-i18n'
 gem 'simple_form'
-gem 'trix'
+
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem "refile-s3", '~> 0.2.0'
@@ -51,6 +51,8 @@ gem 'client_side_validations'
 
 gem 'client_side_validations-simple_form'
 
+
+gem 'summernote-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

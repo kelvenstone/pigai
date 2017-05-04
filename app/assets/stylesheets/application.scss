@@ -12,12 +12,15 @@
  *
 
  *= require_self
- *= require trix
  *= require jquery.fileupload-ui
  *= require_tree .
  */
+
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "summernote";
+
  @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 

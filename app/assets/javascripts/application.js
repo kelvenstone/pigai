@@ -13,27 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+
 //= require bootstrap/alert
 //= require bootstrap/dropdown
-//= require trix
-//= require bootstrap/modal
-//= require jquery
-//= require jquery_ujs
-//= require jquery-fileupload
+//= require bootstrap-sprockets
+//= require summernote
 //= require_tree .
-
-
-$("document").ready(function(){
-
-  $("#fileToUpload").change(function() {
-    
-     if ($("#fileToUpload")[0].files[0]) {
-       alert('changed!');
-       var file = $("#fileToUpload")[0].files[0];
-       $("trix-editor")[0].editor.sendFile(file);
-
-     }
-   });
-
-
-});

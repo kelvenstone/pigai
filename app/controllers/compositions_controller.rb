@@ -10,7 +10,6 @@ class CompositionsController < ApplicationController
 
   def new
     @composition = Composition.new
-
   end
 
   def create

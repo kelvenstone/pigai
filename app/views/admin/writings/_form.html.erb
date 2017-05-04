@@ -9,7 +9,7 @@
 
 <%= simple_form_for [:admin, @writing] do |f| %>
   <div class="form-input">
-      <%= f.input :content, :label => "我的作文" %>
+      <%= f.input :content,as: :summernote, :label => "我的作文" %>
   </div>
 
   <div class="form-actions">

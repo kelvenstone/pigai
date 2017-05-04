@@ -11,7 +11,7 @@
 
 <%= simple_form_for [:account, @correction] do |f| %>
   <div class="form-input">
-      <%= f.trix_editor :content, :label => "我的批改" %>
+      <%= f.input :content, as: :summernote,  :label => "我的批改" %>
   </div>
 
   <div class="form-actions">
