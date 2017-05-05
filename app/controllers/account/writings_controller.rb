@@ -1,6 +1,6 @@
 class Account::WritingsController < ApplicationController
   before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]
-  layout "side_grade"
+
 
   def index
     @writings = current_user.writings.recent.paginate(:page => params[:page], :per_page => 8)

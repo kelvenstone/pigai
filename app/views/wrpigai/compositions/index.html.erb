@@ -1,21 +1,27 @@
 <div class="pigai">
-  <div class="col-md-8">
-    <h2 class="text-center">我要写作</h2>
-    <% if current_user %>
-      <% if current_user.admin? %>
-            <%= link_to("输入作文题", new_composition_path(@composition),class: "btn btn-default pull-right") %>
-      <% end %>
-    <% end %>
-    <table class= "table table-hover">
-      <thead>
-        <tr>
-          <th> 年级 </th>
-          <th> 作文标题 </th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= render :partial => "com_item", :collection => @compositions, :as => :composition %>
-      </tbody>
-    </table>
+  <div class="col-md-8 col-centered ">
+
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+        <div class="panel-heading">
+          <h2 class="text-center">我要写作</h2>
+        </div>
+        <% if current_user %>
+          <% if current_user.admin? %>
+                <%= link_to("输入作文题", new_composition_path(@composition),class: "btn btn-default pull-right") %>
+          <% end %>
+        <% end %>
+        <table class= "table table-hover">
+          <thead>
+            <tr>
+              <th> 年级 </th>
+              <th> 作文标题 </th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render :partial => "com_item", :collection => @compositions, :as => :composition %>
+          </tbody>
+        </table>
+      </div>
   </div>
 </div>

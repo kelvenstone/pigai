@@ -4,7 +4,7 @@
       <td> <%= writing.composition.grade %></td>
       <td> <%= writing.composition.com_title %></td>
       <td> <%= link_to("点击进入", account_writing_path(writing)) %> </td>
-      <td> <%= link_to(writing.corrections.count,writing_corrections_path(writing)) %></td>
+      <td> <%= link_to(writing.corrections.count, writing_corrections_path(writing)) %></td>
     <% else %>
 
     <% end %>

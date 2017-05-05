@@ -1,6 +1,6 @@
 class Account::CorrectionsController < ApplicationController
   before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]
-  layout "side_grade"
+
 
   def index
       @corrections = current_user.corrections.recent.paginate(:page => params[:page], :per_page => 8)

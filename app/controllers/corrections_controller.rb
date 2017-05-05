@@ -1,12 +1,12 @@
 class CorrectionsController < ApplicationController
   before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]
-  layout "side_grade"
+
 
   def index
     @writing = Writing.find(params[:writing_id])
     @corrections = @writing.corrections.order("created_at DESC")
   end
-  
+
   def new
     @writing = Writing.find(params[:writing_id])
     @composition = @writing.composition

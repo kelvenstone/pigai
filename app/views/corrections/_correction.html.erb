@@ -1,9 +1,11 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8 col-centered">
                 <h3 class="panel-title">
-                    <%= correction.user.email %>批阅如下
+                    <% if correction.user %>
+                      <%= correction.user.email %>批阅如下
+                    <% end %>
                 </h3>
             </div>
 

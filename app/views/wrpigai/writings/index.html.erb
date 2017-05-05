@@ -1,17 +1,22 @@
 <div class="pigai">
-  <div class="col-md-8">
-    <h2 class="text-center"> 我来批改 </h2>
-    <table class= "table table-hover">
-      <thead>
-        <tr>
-          <th> 年级 </th>
-          <th> 作文标题 </th>
-          <th> 作者 </th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= render :partial => "writing_item", :collection => @writings, :as => :writing %>
-      </tbody>
-    </table>
+  <div class="col-md-8 col-centered">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+        <div class="panel-heading">
+          <h2 class="text-center"> 我来批改 </h2>
+        </div>
+        <table class= "table table-hover">
+          <thead>
+            <tr>
+              <th> 年级 </th>
+              <th> 作文标题 </th>
+              <th> 作者 </th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render :partial => "writing_item", :collection => @writings, :as => :writing %>
+          </tbody>
+        </table>
+    </div>
   </div>
 </div>
