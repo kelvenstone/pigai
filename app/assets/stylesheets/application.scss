@@ -97,22 +97,17 @@ html {
    color: #212121;
  }
 
-//首页大图格式设置
+
+//---------Box---------
+
 .box {
     background-image:url("http://ww3.sinaimg.cn/large/006tKfTcgy1ff2ecn5n3sj31kw11z4r2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 
-      //大图撑满全屏
-  //  .container-fluid . box{
-  //    padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
-  //    margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
-  //    border-radius: 0;//圆角为0
-  //  }
-
-   .box-inner {
-        background-color: rgba(250, 250, 250, 0.49);
+    .box-inner {
+        background-color: rgba(250, 250, 250, 0.69);
         padding-bottom: 5px;
         margin-top: 150px;
         margin-bottom: 150px;
@@ -122,26 +117,25 @@ html {
 
     .title {
         text-align: center;
-        margin-top: 30px;//和顶部拉开距离
         margin-bottom: 0px;
+        margin-top: 30px;//和顶部拉开距离
         font-size:50px;//字体大小
         padding: 30px 20px 0;//上50px，左右20px，下0
     }
 
     .slogan {
-      margin-top: 10px;
-      margin-bottom: 30px;
-      text-align: center;
-      color: #222;
-      top: 12px;
-      font-size: 30px;//字体大小
-      padding: 35px;//上下左右padding为20px
+        color: #222;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 30px;
+        top: 12px;
     }
 
     .lead {
-      margin-bottom: 60px;
-      text-align: center;
-      color: white;
+        margin-bottom: 60px;
+        text-align: center;
+        color: white;
     }
 
     .btn-danger {
@@ -162,36 +156,6 @@ html {
        border-radius: 3px;//btn圆角
        width: 200px;//这里用指定宽度把btn拉得更长
     }
-  //首页背景主体字，带有透明度的背景色
-  // .title {
-  //     background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
-  //     max-width: 650px;//最大宽度
-  //     margin-top: 150px;//和顶部拉开距离
-  //     margin-bottom: 0;//这样就可以紧接息面的描述文字
-  //     border-top-right-radius: 3px;//右上角圆边
-  //     border-top-left-radius: 3px;//左上角圆边
-  //   }
-
-  //  . box h1, . box .h1 {
-  //      text-align: left;//文字左对齐
-  //      color: #222;  //字体颜色
-  //      padding: 50px 20px 0;//上50px，左右20px，下0
-  //  }
-
-  //  . box p {
-  //      margin: 0;//上下左右margin为0
-  //      font-size: 36px;//字体大小
-  //      max-width: 650px;//最大宽度
-  //      background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
-  //      padding: 20px;//上下左右padding为20px
-  //      text-align:left;//文字左对齐
-  //      color: #222;//字体颜色
-   //
-  //      border-bottom-right-radius: 3px;//右下角圆边
-  //      border-bottom-left-radius: 3px;//左下角圆边
-  //  }
-
-  //首页大图上 box里面 按钮字体颜色设置
 
 }
 
@@ -365,24 +329,25 @@ html {
 .devise-view .devise-sign-up {
   margin: 30px auto;
   color: #ffffff;
-  width: 900px;
-  height: 800px;
+  // width: 900px;
+  // height: 800px;
 }
 
 .devise-view .devise-sign-up .left {
   padding: 0 20px 20px;
-  width: 540px;
-  height: 800px;
-  float: left;
+  // width: 540px;
+  // height: 800px;
+  float: col-centered;
 }
 
 .devise-view .devise-sign-up .right {
   padding: 20px 20px 0;
   margin:auto;
-  width: 360px;
-  height: 800px;
-  float: left;
+  // width: 360px;
+  // height: 800px;
+  float: col-centered;
   color: #fff;
+  margin-bottom: 50px;
 }
 
 .devise-view .devise-sign-up .right .h3,h3 {

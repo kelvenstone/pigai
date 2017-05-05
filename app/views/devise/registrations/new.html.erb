@@ -26,39 +26,43 @@
   <div class="devise-view">
     <img alt="background image">
     <div class="devise-sign-up">
-      <div class="left">
-        <h1>51Pi</h1>
-        <div class="description ">
-          <h2>批同学的作文，成自己的未来</h2>
-          <p>这是提高自己写作能力的最快速捷径之一</p>
-          <h2>我们是原装的</h2>
-          <p>作文都来自学生自己写的文章，所有的错误都是原版的！</p>
-        </div>
-      </div>
-      <div class="right">
+      <div class="row">
+          <div class="col-lg-4 col-lg-offset-2 col-sm-6 ">
+            <div class="left">
+              <h1>51Pi</h1>
+              <div class="description ">
+                <h2>批同学的作文，成自己的未来</h2>
+                <p>这是提高自己写作能力的最快速捷径之一</p>
+                <h2>我们是原装的</h2>
+                <p>作文都来自学生自己写的文章，所有的错误都是原版的！</p>
+              </div>
+            </div>
+          </div>
 
-        <div class="row ">
-          <h3> 注册 </h3>
-          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), validate: true) do |f| %>
-            <%= f.error_notification %>
-            <!-- <%= f.input :email, required: true, label: false, autofocus: true, placeholder: "请输入电子邮箱",type: "email" %> -->
-            <%= f.input :email,label: false, placeholder: "请输入电子邮箱", autofocus: true,type: "email" %>
-            <!-- <%= f.input :password, label: false, placeholder: "密码至少6位", type: "password",:input_html => {:minlength => 6 , maxlength: 10} %> -->
-            <%= f.input :password, label: false, placeholder: "密码至少6位", type: "password" %>
-            <%= f.input :password_confirmation, label: false,  placeholder: "再输入一遍确认密码", type: "password" %>
-            <%= f.input :name, required: true, label: false,  placeholder: "请填写真实姓名。" %>
-            <%= f.input :date_of_birth, as: :date, label: false, html5: true %>
-            <%= f.input :is_female, as: :radio_buttons,collection: [['男',false],['女',true]],label: false %>
-            <%= f.input :school, required: true, label: false,  placeholder: "＊＊省＊＊市＊＊地区＊＊＊学校" %>
-            <%= f.input :qq_number,required: true, label: false,  placeholder: "请输入您的QQ号码" %>
-            <!-- <%= f.input :phone_number, label: false,  placeholder: "重要！请填写你的有效手机号码",:input_html => { :type => "tel" } %> -->
-            <%= f.input :phone_number, label: false,  placeholder: "重要！请填写你的有效手机号码" %>
-            <%= f.button :submit, :label => "注 册", type: "submit", name: "commit", value: "注 册", class: "btn btn-success" %>
-          <% end %>
-          <br />
-          已经有账号？  <a href="/users/sign_in">登录</a>
-          <br />
-        </div>
+          <div class="col-lg-3 col-sm-6 ">
+            <div class="right">
+                <h3> 注册 </h3>
+                <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), validate: true) do |f| %>
+                  <%= f.error_notification %>
+                  <!-- <%= f.input :email, required: true, label: false, autofocus: true, placeholder: "请输入电子邮箱",type: "email" %> -->
+                  <%= f.input :email,label: false, placeholder: "请输入电子邮箱", autofocus: true,type: "email" %>
+                  <!-- <%= f.input :password, label: false, placeholder: "密码至少6位", type: "password",:input_html => {:minlength => 6 , maxlength: 10} %> -->
+                  <%= f.input :password, label: false, placeholder: "密码至少6位", type: "password" %>
+                  <%= f.input :password_confirmation, label: false,  placeholder: "再输入一遍确认密码", type: "password" %>
+                  <%= f.input :name, required: true, label: false,  placeholder: "请填写真实姓名。" %>
+                  <%= f.input :date_of_birth, as: :date, label: false, html5: true %>
+                  <%= f.input :is_female, as: :radio_buttons,collection: [['男',false],['女',true]],label: false %>
+                  <%= f.input :school, required: true, label: false,  placeholder: "＊＊省＊＊市＊＊地区＊＊＊学校" %>
+                  <%= f.input :qq_number,required: true, label: false,  placeholder: "请输入您的QQ号码" %>
+                  <!-- <%= f.input :phone_number, label: false,  placeholder: "重要！请填写你的有效手机号码",:input_html => { :type => "tel" } %> -->
+                  <%= f.input :phone_number, label: false,  placeholder: "重要！请填写你的有效手机号码" %>
+                  <%= f.button :submit, :label => "注 册", type: "submit", name: "commit", value: "注 册", class: "btn btn-success" %>
+                <% end %>
+                <br />
+                已经有账号？  <a href="/users/sign_in">登录</a>
+                <br />
+            </div>
+          </div>
     </div>
   </div>
 </div>

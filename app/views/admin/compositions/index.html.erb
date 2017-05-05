@@ -1,35 +1,37 @@
 <div class="pigai">
-  <div class="col-md-8 col-centered">
-    <div class="panel panel-default">
-      <!-- Default panel contents -->
-      <div class="panel-heading">
-          <h2 class="text-center">所有的作文题
-            <% if current_user %>
-              <% if current_user.admin? %>
-                    <%= link_to("输入作文题", new_admin_composition_path(@composition),class: "btn btn-default pull-right") %>
+  <div class="row">
+    <div class="col-lg-8 col-centered">
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            <h2 class="text-center">所有的作文题
+              <% if current_user %>
+                <% if current_user.admin? %>
+                      <%= link_to("输入作文题", new_admin_composition_path(@composition),class: "btn btn-default pull-right") %>
+                <% end %>
               <% end %>
-            <% end %>
-          </h2>
+            </h2>
+        </div>
+
+        <table class= "table table-hover">
+          <thead>
+            <tr>
+              <th> 年级 </th>
+              <th> 作文标题 </th>
+              <th> 已写作文数量 </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <%= render :partial => "com_item", :collection => @compositions, :as => :composition %>
+          </tbody>
+        </table>
+
+        <div class="text-center">
+          <%= will_paginate @compositions %>
+        </div>
+
       </div>
-
-      <table class= "table table-hover">
-        <thead>
-          <tr>
-            <th> 年级 </th>
-            <th> 作文标题 </th>
-            <th> 已写作文数量 </th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <%= render :partial => "com_item", :collection => @compositions, :as => :composition %>
-        </tbody>
-      </table>
-
-      <div class="text-center">
-        <%= will_paginate @compositions %>
-      </div>
-
     </div>
   </div>
 </div>

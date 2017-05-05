@@ -3,32 +3,35 @@
   <div class="devise-view">
     <img alt="background image">
     <div class="devise-sign-up">
-      <div class="left">
-        <h1>51Pi</h1>
-        <div class="description ">
-          <h2>批同学的作文，成自己的未来</h2>
-          <p>这是提高自己写作能力的最快速捷径之一</p>
-          <h2>我们是原装的</h2>
-          <p>作文都来自学生自己写的文章，所有的错误都是原版的！</p>
-        </div>
-      </div>
-      <div class="right">
-
-        <div class="row ">
-          <h3> 修改信息 </h3>
-          <%= simple_form_for [:account, @user] do |f| %>
-          <div>
-            <%= f.input :email %>
-            <%= f.input :name %>
-            <%= f.input :school %>
-            <%= f.input :qq_number %>
-            <%= f.input :phone_number %>
-            <%= f.submit "提交", class: "btn btn-success" %>
-            <%= link_to "Back", :back,class: "btn btn-info" %>
+      <div class="row">
+          <div class="col-lg-4 col-lg-offset-2 col-sm-6 ">
+            <div class="left">
+              <h1>51Pi</h1>
+              <div class="description ">
+                <h2>批同学的作文，成自己的未来</h2>
+                <p>这是提高自己写作能力的最快速捷径之一</p>
+                <h2>我们是原装的</h2>
+                <p>作文都来自学生自己写的文章，所有的错误都是原版的！</p>
+              </div>
+            </div>
           </div>
-          <% end %>
-        </div>
-      </div>
-
+          <div class="col-lg-3 col-sm-6 ">
+            <div class="right">
+              <div class="row ">
+                <h3> 修改信息 </h3>
+                <%= simple_form_for [:account, @user] do |f| %>
+                <div>
+                  <%= f.input :email %>
+                  <%= f.input :name %>
+                  <%= f.input :school %>
+                  <%= f.input :qq_number %>
+                  <%= f.input :phone_number %>
+                  <%= f.submit "提交", class: "btn btn-success" %>
+                  <%= link_to "Back", :back,class: "btn btn-info" %>
+                </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
   </div>
 </div>
