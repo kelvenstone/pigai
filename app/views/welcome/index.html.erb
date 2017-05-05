@@ -1,19 +1,70 @@
+<div class="col-md-12">
+  <div class="row box">
+    <div class="box-inner col-md-7 col-md-offset-1 col-sm-12">
+        <h1 class="title">51Pi</h1>
+        <p class="slogan">批别人的作文，成自己的未来
+          <br>
+          <br>
+          51Pi 是一个通过批改同学作文
+          <br>
+          快速提高英语写作能力的网站
+          <br>
+        </p>
+        <p class="lead">
+          <% if current_user && !current_user.admin? %>
+            <a class="active"> <%= link_to("我来批改", wrpigai_writings_path, class:"btn btn-lg btn-danger" ) %> </a>
+          <% else %>
+            <a class="active"> <%= link_to("我来批改", new_user_session_path, class:"btn btn-lg btn-danger" ) %> </a>
+          <% end %>
+        </p>
+    </div>
+  </div>
+</div>
 
+<div class="content-section-a">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-6">
+        <hr class="section-heading-spacer">
+        <div class="clearfix"></div>
+        <h2 class="section-heading">别人的错误就是你的分数</h2>
+        <p class="lead">批改者往往比被批改者收获更多</p>
+      </div>
+      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+        <%= image_tag 'pic-1.jpg', class: 'img-responsive' %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="jumbotron">
-  <h1 class="title">51Pi</h1>
-  <p class="slogan">51Pi 是一个通过批改同学作文来
-  <br>
-  快速提高写作能力的网站！
-  <br>
-  <br>
-  批别人的作文，成就自己！
-  </p>
-  <p class="lead">
-    <% if current_user && !current_user.admin? %>
-      <a class="active"> <%= link_to("我来批改", wrpigai_writings_path, class:"btn btn-lg btn-danger" ) %> </a>
-    <% else %>
-      <a class="active"> <%= link_to("我来批改", new_user_session_path, class:"btn btn-lg btn-danger" ) %> </a>
-    <% end %>
-  </p>
+<div class="content-section-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+        <hr class="section-heading-spacer">
+        <div class="clearfix"></div>
+        <h2 class="section-heading">挑错是你天生的能力</h2>
+        <p class="lead">挑错比写文章容易多了</p>
+      </div>
+      <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+        <%= image_tag 'pic-2.jpg', class: 'img-responsive' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-section-c">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-6">
+        <hr class="section-heading-spacer">
+        <div class="clearfix"></div>
+        <h2 class="section-heading">错误是原版而非盗版</h2>
+        <p class="lead">我们的作文都是本平台学生自己写的作文<br>所以，我们的错误也是原版的</a></p>
+      </div>
+      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+        <%= image_tag 'pic-3.jpg', class: 'img-responsive' %>
+      </div>
+    </div>
+  </div>
 </div>

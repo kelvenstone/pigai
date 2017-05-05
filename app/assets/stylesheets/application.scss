@@ -98,82 +98,136 @@ html {
  }
 
 //首页大图格式设置
-.jumbotron {
-  background-image:url("http://ww3.sinaimg.cn/large/006tKfTcgy1ff2ecn5n3sj31kw11z4r2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 100px;
+.box {
+    background-image:url("http://ww3.sinaimg.cn/large/006tKfTcgy1ff2ecn5n3sj31kw11z4r2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+
+      //大图撑满全屏
+  //  .container-fluid . box{
+  //    padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
+  //    margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  //    border-radius: 0;//圆角为0
+  //  }
+
+   .box-inner {
+        background-color: rgba(250, 250, 250, 0.49);
+        padding-bottom: 5px;
+        margin-top: 150px;
+        margin-bottom: 150px;
+        border-top-right-radius: 8px;//右上角圆边
+        border-top-left-radius: 8px;//左上角圆边
+    }
+
+    .title {
+        text-align: center;
+        margin-top: 30px;//和顶部拉开距离
+        margin-bottom: 0px;
+        font-size:50px;//字体大小
+        padding: 30px 20px 0;//上50px，左右20px，下0
+    }
+
+    .slogan {
+      margin-top: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #222;
+      top: 12px;
+      font-size: 30px;//字体大小
+      padding: 35px;//上下左右padding为20px
+    }
+
+    .lead {
+      margin-bottom: 60px;
+      text-align: center;
+      color: white;
+    }
+
+    .btn-danger {
+       color: #fff;//字体颜色
+       background-color: #EF6C00;//背景颜色
+       border-color: #EF6C00;//边框颜色
+    }
+
+    .btn-danger:hover {
+       background-color: #E65100;//鼠标放置在btn上的背景颜色
+       border-color: #E65100;//鼠标放置在btn上的边框颜色
+    }
+
+    .btn-lg, .btn-group-lg > .btn {
+       padding: 8px 16px;//通过padding来决定btn的大小
+       font-size: 25px;//btn文字大小
+       letter-spacing: 3px;//调整文字间距
+       border-radius: 3px;//btn圆角
+       width: 200px;//这里用指定宽度把btn拉得更长
+    }
+  //首页背景主体字，带有透明度的背景色
+  // .title {
+  //     background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
+  //     max-width: 650px;//最大宽度
+  //     margin-top: 150px;//和顶部拉开距离
+  //     margin-bottom: 0;//这样就可以紧接息面的描述文字
+  //     border-top-right-radius: 3px;//右上角圆边
+  //     border-top-left-radius: 3px;//左上角圆边
+  //   }
+
+  //  . box h1, . box .h1 {
+  //      text-align: left;//文字左对齐
+  //      color: #222;  //字体颜色
+  //      padding: 50px 20px 0;//上50px，左右20px，下0
+  //  }
+
+  //  . box p {
+  //      margin: 0;//上下左右margin为0
+  //      font-size: 36px;//字体大小
+  //      max-width: 650px;//最大宽度
+  //      background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
+  //      padding: 20px;//上下左右padding为20px
+  //      text-align:left;//文字左对齐
+  //      color: #222;//字体颜色
+   //
+  //      border-bottom-right-radius: 3px;//右下角圆边
+  //      border-bottom-left-radius: 3px;//左下角圆边
+  //  }
+
+  //首页大图上 box里面 按钮字体颜色设置
+
 }
-    //大图撑满全屏
- .container-fluid .jumbotron{
-   padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
-   margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
-   border-radius: 0;//圆角为0
- }
 
-//首页背景主体字，带有透明度的背景色
-.title {
-    background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
-    max-width: 450px;//最大宽度
-    margin-top: 150px;//和顶部拉开距离
-    margin-bottom: 0;//这样就可以紧接息面的描述文字
-    border-top-right-radius: 3px;//右上角圆边
-    border-top-left-radius: 3px;//左上角圆边
-  }
+//---------Content---------
 
- .jumbotron h1, .jumbotron .h1 {
-     text-align: left;//文字左对齐
-     color: #222;  //字体颜色
-     padding: 50px 20px 0;//上50px，左右20px，下0
- }
+.content-section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
 
- .jumbotron p {
-     margin: 0;//上下左右margin为0
-     font-size: 26px;//字体大小
-     max-width: 450px;//最大宽度
-     background-color: rgba(250, 250, 250, 0.39);//背景颜色含透明度
-     padding: 20px;//上下左右padding为20px
-     text-align:left;//文字左对齐
-     color: #222;//字体颜色
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
 
-     border-bottom-right-radius: 3px;//右下角圆边
-     border-bottom-left-radius: 3px;//左下角圆边
- }
+.content-section-c {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
 
-.slogan {
-  margin-top: 10px;
-  margin-bottom: 50px;
-  text-align: center;
-  color: white;
-  top: 12px;
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.section-heading {
+    margin-bottom: 30px;
 }
 
 .lead {
-  margin-bottom: 60px;
-  text-align: center;
-  color: white;
+    font-size: 18px;
+    font-weight: 400;
 }
 
-//首页大图上jumbotron里面 按钮字体颜色设置
-
-.btn-danger {
-   color: #fff;//字体颜色
-   background-color: #EF6C00;//背景颜色
-   border-color: #EF6C00;//边框颜色
-}
-
-.btn-danger:hover {
-   background-color: #E65100;//鼠标放置在btn上的背景颜色
-   border-color: #E65100;//鼠标放置在btn上的边框颜色
-}
-
-.btn-lg, .btn-group-lg > .btn {
-   padding: 8px 16px;//通过padding来决定btn的大小
-   font-size: 20px;//btn文字大小
-   letter-spacing: 3px;//调整文字间距
-   border-radius: 3px;//btn圆角
-   width: 200px;//这里用指定宽度把btn拉得更长
-}
 
 /******弹窗 LOGIN MODAL 弹窗在本案例中未使用******/
 .loginmodal-container {
