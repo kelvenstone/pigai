@@ -99,21 +99,27 @@ html {
   .navbar-default .navbar-brand {
     color: #EF6C00; //字体颜色
     padding: 10px 15px 10px 120px; //上下10px，左右15px
-    line-height: 30px; //文字行高
-    font-size:20px;//字体大小
+    line-height: 40px; //文字行高
+    height: 60px;
+    font-size:30px;//字体大小
 
+  }
+
+
+  .navbar-default .navbar-toggle {
+    height: 40px;
   }
 
   .navbar-center {
     color: #EF6C00; //字体颜色
     padding: 0 15px; //上下10px，左右15px
-    font-size:16px;//字体大小
+    font-size:20px;//字体大小
   }
 
   .navbar-right {
     color: #EF6C00; //字体颜色
     padding: 0 150px 0 15px; //上下10px，左右15px
-    font-size:16px;//字体大小
+    font-size:20px;//字体大小
   }
 
   .navbar-default .navbar-brand:hover,
