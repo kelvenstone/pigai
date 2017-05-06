@@ -13,6 +13,9 @@
         <p class="lead">
           <% if current_user && !current_user.admin? %>
             <a class="active"> <%= link_to("我来批改", wrpigai_writings_path, class:"btn btn-lg btn-danger" ) %> </a>
+            <a class="active"> <%= link_to("我要写作", wrpigai_compositions_path, class:"btn btn-lg btn-danger" ) %> </a>
+          <% elsif current_user && current_user.admin? %>
+            <a class="active"> <%= link_to("导入作文题", new_admin_composition_path(@composition), class:"btn btn-lg btn-danger" ) %> </a>
           <% else %>
             <a class="active"> <%= link_to("我来批改", new_user_session_path, class:"btn btn-lg btn-danger" ) %> </a>
           <% end %>
