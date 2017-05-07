@@ -3,15 +3,16 @@ class Account::UsersController < ApplicationController
   before_action :authenticate_user!
 
   def edit
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def update
-    @user = current_user
+    @user = User.find(params[:id])
     if @user.update(user_params)
       flash[:notice] = "信息更新成功"
       redirect_to edit_account_user_path(current_user)
     else
+      flash[:notice] = "修改失败"
       render :edit
     end
   end
@@ -19,7 +20,7 @@ class Account::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :qq_number, :school, :phone_number)
+    params.require(:user).permit(:email, :name, :school, :qq_number, :phone_number)
   end
 
 

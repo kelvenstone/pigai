@@ -26,12 +26,18 @@
                   <%= f.input :school %>
                   <%= f.input :qq_number %>
                   <%= f.input :phone_number %>
-                  <%= f.submit "提交", class: "btn btn-success" %>
-                  <%= link_to "Back", :back,class: "btn btn-info" %>
+                  <!-- <%= f.button :submit, :value => "提交", type: "submit", class: "btn btn-success" %> -->
+                  <%= f.button :submit, :label => "提交", type: "submit", name: "commit", value: "提交", class: "btn btn-success" %>
+
+
+                  <%= link_to "Back", :back, class: "btn btn-info" %>
+                  <% end %>
                 </div>
-                <% end %>
+
               </div>
             </div>
           </div>
+        </div>
+      </div>
   </div>
 </div>
