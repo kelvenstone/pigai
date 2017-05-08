@@ -216,6 +216,9 @@ html {
     }
 
     .btn-lg, .btn-group-lg > .btn {
+
+       margin-left: 10px;
+       margin-right: 10px;
        padding: 8px 16px;//通过padding来决定btn的大小
        font-size: 25px;//btn文字大小
        letter-spacing: 3px;//调整文字间距
