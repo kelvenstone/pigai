@@ -40,6 +40,8 @@ html {
  body {
    /* Margin bottom by footer height */
    margin-bottom: 100px;
+   background-color: #f9f9fa;
+   color: #333;
  }
 
 
@@ -82,8 +84,29 @@ html {
          overflow: hidden!important;
      }
 
- }
+  .pigai{
+    margin: 0;
+    width: 100%;
+    padding: 15px 30px;
+    box-shadow: none;
+    padding-top: 40px;
+    }
 
+ }
+ @media (min-width: 992px) {
+   .pigai {
+     position: relative;
+     display: block;
+     margin: 20px auto;
+     background-color: #fff;
+     color: #333;
+     width: 960px;
+     min-height: 400px;
+     box-shadow: 1px 2px 4px 0 rgba(0,0,0,0.25);
+     padding: 30px 60px;
+     border-radius: 1px;
+   }
+}
  //---------Navbar---------
    .navbar-default {
        background-color: #212121;  //背景颜色
@@ -217,8 +240,7 @@ html {
 
     .btn-lg, .btn-group-lg > .btn {
 
-       margin-left: 10px;
-       margin-right: 10px;
+       margin-top: 5px;
        padding: 8px 16px;//通过padding来决定btn的大小
        font-size: 25px;//btn文字大小
        letter-spacing: 3px;//调整文字间距
@@ -494,19 +516,8 @@ form {
   margin: 0 auto;
 }
 
-/******登录后正文背景图，未使用 5.2日屏蔽*****/
-/****** 使用时：pigai123改成pigai *****/
-.pigai {
 
-  background-color: #F5F5F5;
-  background-size: cover;
-  background-repeat: repeat-y;
-  margin: auto;
-  padding-bottom: 20px;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-}
+
 
 /* Footer */
 
