@@ -5,7 +5,6 @@
         <h2> 作文标题: <%= @composition.com_title %> </h2>
         <p> 年级：<%= @composition.grade %> </p>
         <p> 写作要求： <%=h raw @composition.content %></p>
-        <!-- <p> <%=@writing.user.email  %>的作文：<%= @writing.content %> </p> -->
         <p> <%=@writing.user.email  %>的作文： <%=h raw @writing.content %></p>
         <% if current_user == @writing.user %>
           <%= link_to("再写一篇", wrpigai_compositions_path, class: "btn btn-primary")%>
