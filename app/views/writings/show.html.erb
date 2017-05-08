@@ -2,22 +2,23 @@
   <div class="pigai">
     <div class="col-md-8 col-centered">
       <div class="writing">
-      <h2> 作文标题: <%= @composition.com_title %> </h2>
-      <p> 年级：<%= @composition.grade %> </p>
-      <p> 写作要求： <%=h raw @composition.content %></p>
-      <!-- <p> <%=@writing.user.email  %>的作文：<%= @writing.content %> </p> -->
-      <p> <%=@writing.user.email  %>的作文： <%=h raw @writing.content %></p>
-      <% if current_user == @writing.user %>
-        <%= link_to("再写一篇", wrpigai_compositions_path, class: "btn btn-primary")%>
-      <% elsif current_user && current_user.admin? %>
-        <%= link_to("返回", composition_writings_path(@composition), class: "btn btn-primary")%>
-      <% else %>
-        <%= link_to("批改", new_writing_correction_path(@writing), class: "btn btn-primary")%>
-      <% end %>
-      <!-- <% if current_user && current_user == @writing.user %>
-       <%= link_to("Edit", edit_composition_writing_path(@writing), class: "btn btn-primary")%>
-        <%= link_to("Delete", composition_writing_path(@writing), class:"btn btn-sm btn-default", method: :delete, data:{confirm:"Are you sure?"}) %>
-      <% end %> -->
+        <h2> 作文标题: <%= @composition.com_title %> </h2>
+        <p> 年级：<%= @composition.grade %> </p>
+        <p> 写作要求： <%=h raw @composition.content %></p>
+        <!-- <p> <%=@writing.user.email  %>的作文：<%= @writing.content %> </p> -->
+        <p> <%=@writing.user.email  %>的作文： <%=h raw @writing.content %></p>
+        <% if current_user == @writing.user %>
+          <%= link_to("再写一篇", wrpigai_compositions_path, class: "btn btn-primary")%>
+        <% elsif current_user && current_user.admin? %>
+          <%= link_to("返回", composition_writings_path(@composition), class: "btn btn-primary")%>
+        <% else %>
+          <%= link_to("批改", new_writing_correction_path(@writing), class: "btn btn-primary")%>
+        <% end %>
+        <!-- <% if current_user && current_user == @writing.user %>
+         <%= link_to("Edit", edit_composition_writing_path(@writing), class: "btn btn-primary")%>
+          <%= link_to("Delete", composition_writing_path(@writing), class:"btn btn-sm btn-default", method: :delete, data:{confirm:"Are you sure?"}) %>
+        <% end %> -->
+      </div>
     </div>
   </div>
 </div>
