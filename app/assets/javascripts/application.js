@@ -18,5 +18,6 @@
 //= require bootstrap/dropdown
 //= require bootstrap-sprockets
 //= require summernote
+//= require summernote/locales
 //= require bootstrap/collapse
 //= require_tree .

@@ -31,6 +31,7 @@ $ ->
     $('[data-provider="summernote"]').each ->
       $(this).summernote
         height: 200
+        lang: 'zh-CN'
         callbacks:
           onImageUpload: (files) ->
             img = sendFile(this, files[0])
