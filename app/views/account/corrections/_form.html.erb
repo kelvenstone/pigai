@@ -3,7 +3,7 @@
   <h2> 作文标题: <%= @composition.com_title %> </h2>
   <p> 年级：<%= @composition.grade %> </p>
   <p> 写作要求： <%=h raw @composition.content %></p>
-  <p> <%=@writing.user.email  %>写的作文：<%=h raw @writing.content %> </p>
+  <p> <%=@writing.user.name  %>写的作文：<%=h raw @writing.content %> </p>
 
 
 </div>

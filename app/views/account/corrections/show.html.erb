@@ -4,7 +4,7 @@
       <h2> 作文标题: <%= @composition.com_title %> </h2>
       <p> 年级：<%= @composition.grade %> </p>
       <p> 写作要求： <%=h raw @composition.content %></p>
-      <p> <%=@writing.user.email  %>的作文：<%=h raw @writing.content %> </p>
+      <p> <%=@writing.user.name  %>的作文：<%=h raw @writing.content %> </p>
       <p> 我的批改如下：</p>
       <p>  <%=h raw @correction.content %></p>
       <%= link_to("Edit", edit_account_correction_path(@correction),class: "btn btn-sm btn-default") %>

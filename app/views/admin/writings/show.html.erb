@@ -6,8 +6,8 @@
         <p> 年级：<%= @composition.grade %> </p>
         <p> 写作要求： <%=h raw @composition.content %></p>
       <% end %>
-      <!-- <p> <%=@writing.user.email  %>的作文：<%= @writing.content %> </p> -->
-      <p> <%=@writing.user.email  %>的作文：<%=h raw @writing.content %> </p>
+      <!-- <p> <%=@writing.user.name  %>的作文：<%= @writing.content %> </p> -->
+      <p> <%=@writing.user.name  %>的作文：<%=h raw @writing.content %> </p>
 
       <%= link_to("Delete", admin_writing_path(@writing), class:"btn btn-sm btn-default", method: :delete, data:{confirm:"Are you sure?"}) %>
       <%= link_to("返回", admin_writings_path, class: "btn btn-primary")%>
